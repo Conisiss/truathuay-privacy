@@ -1,0 +1,304 @@
+<title>นโยบายความเป็นส่วนตัว ตรวจหวย</title>
+<style>
+  :root {
+    --bg: #eeeef1;
+    --surface: #f8f8fa;
+    --surface-alt: #ffffff;
+    --text: #1c1c1e;
+    --text-secondary: #68676c;
+    --accent: #f5c518;
+    --accent-ink: #6b4e00;
+    --border: rgba(28, 28, 30, 0.09);
+    --shadow: rgba(28, 28, 30, 0.07);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #18181b;
+      --surface: #201f22;
+      --surface-alt: #252428;
+      --text: #f1f0ed;
+      --text-secondary: #a3a1a6;
+      --accent: #f5c518;
+      --accent-ink: #ffe28a;
+      --border: rgba(255, 255, 255, 0.1);
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #18181b;
+    --surface: #201f22;
+    --surface-alt: #252428;
+    --text: #f1f0ed;
+    --text-secondary: #a3a1a6;
+    --accent: #f5c518;
+    --accent-ink: #ffe28a;
+    --border: rgba(255, 255, 255, 0.1);
+    --shadow: rgba(0, 0, 0, 0.35);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans Thai", "Noto Sans Thai", system-ui, sans-serif;
+    line-height: 1.7;
+  }
+
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-weight: 600;
+    font-size: 19px;
+    color: #1c1c1e;
+    font-variant-numeric: tabular-nums;
+    box-shadow: 0 6px 16px var(--shadow);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+
+  header .titles {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .callout {
+    background: var(--surface-alt);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px 12px 12px 4px;
+    padding: 20px 22px;
+    margin-bottom: 44px;
+    box-shadow: 0 8px 20px var(--shadow);
+  }
+
+  .callout p {
+    margin: 0;
+  }
+
+  .callout p + p {
+    margin-top: 8px;
+    color: var(--text-secondary);
+    font-size: 14.5px;
+  }
+
+  .callout strong {
+    color: var(--accent-ink);
+  }
+
+  section {
+    margin-bottom: 34px;
+  }
+
+  section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .clause-label {
+    display: block;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+
+  p {
+    margin: 0 0 10px;
+    max-width: 62ch;
+    color: var(--text);
+  }
+
+  ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    max-width: 62ch;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  li::marker {
+    color: var(--text-secondary);
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 40px 0;
+  }
+
+  footer {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+  }
+
+  footer a {
+    color: var(--accent-ink);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 40px 18px 72px; }
+    h1 { font-size: 22px; }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<div class="page">
+  <header>
+    <div class="mark" aria-hidden="true">1</div>
+    <div class="titles">
+      <span class="eyebrow">ตรวจหวย</span>
+      <h1>นโยบายความเป็นส่วนตัว</h1>
+    </div>
+  </header>
+
+  <div class="meta">
+    <span>มีผลบังคับใช้ 9 กันยายน 2569</span>
+    <span>ฉบับที่ 1</span>
+  </div>
+
+  <div class="callout">
+    <p><strong>สรุปสั้น ๆ</strong> — แอปตรวจหวยไม่เก็บ ไม่ขาย และไม่ส่งข้อมูลส่วนตัวของคุณไปที่ไหนทั้งสิ้น</p>
+    <p>เลขสลากที่คุณกรอกหรือสแกน ถูกบันทึกไว้ในเครื่องของคุณเองเท่านั้น</p>
+  </div>
+
+  <section>
+    <span class="clause-label">ข้อ 1</span>
+    <h2>ข้อมูลที่แอปเก็บจากคุณ</h2>
+    <p>
+      ตรวจหวยไม่มีระบบสมัครสมาชิกหรือเข้าสู่ระบบ จึงไม่มีการเก็บชื่อ อีเมล เบอร์โทรศัพท์
+      หรือข้อมูลใด ๆ ที่ระบุตัวตนของคุณได้
+    </p>
+  </section>
+
+  <section>
+    <span class="clause-label">ข้อ 2</span>
+    <h2>ข้อมูลที่บันทึกไว้ในเครื่องคุณเท่านั้น</h2>
+    <p>แอปบันทึกข้อมูลต่อไปนี้ไว้ในหน่วยความจำของโทรศัพท์คุณเท่านั้น ไม่ส่งขึ้นเซิร์ฟเวอร์ใด ๆ:</p>
+    <ul>
+      <li>เลขสลากที่คุณกรอกหรือสแกนไว้ตรวจสอบ</li>
+      <li>ผลรางวัลล่าสุดที่บันทึกไว้ใช้งานแบบออฟไลน์</li>
+      <li>การตั้งค่าแจ้งเตือน</li>
+    </ul>
+    <p>หากคุณลบแอปออกจากเครื่อง ข้อมูลเหล่านี้จะถูกลบไปด้วยทั้งหมด</p>
+  </section>
+
+  <section>
+    <span class="clause-label">ข้อ 3</span>
+    <h2>การขอสิทธิ์ใช้กล้อง</h2>
+    <p>
+      แอปขอสิทธิ์ใช้กล้องเพื่อสแกนบาร์โค้ดบนใบสลากเท่านั้น ภาพจากกล้องจะถูกอ่านค่าทันทีบนเครื่องของคุณ
+      และไม่ถูกบันทึกหรือส่งออกจากเครื่องไปที่ใดทั้งสิ้น
+    </p>
+  </section>
+
+  <section>
+    <span class="clause-label">ข้อ 4</span>
+    <h2>การแจ้งเตือน</h2>
+    <p>
+      แอปใช้การแจ้งเตือนที่ตั้งเวลาไว้ในเครื่อง (วันที่ 1 และ 16 ของทุกเดือน เวลา 15:00 น.)
+      เพื่อเตือนให้ตรวจผลรางวัล การแจ้งเตือนนี้ทำงานอยู่ในเครื่องของคุณทั้งหมด ไม่มีการส่งข้อมูลผู้ใช้งานออกไปภายนอก
+    </p>
+  </section>
+
+  <section>
+    <span class="clause-label">ข้อ 5</span>
+    <h2>การเชื่อมต่อกับบริการภายนอก</h2>
+    <p>
+      แอปดึงผลรางวัลสลากกินแบ่งรัฐบาลจาก API สาธารณะของสำนักงานสลากกินแบ่งรัฐบาล (glo.or.th)
+      และดึงลิงก์วิดีโอถ่ายทอดจาก YouTube มาแสดงผลเท่านั้น การเชื่อมต่อทั้งสองนี้เป็นการเรียกดูข้อมูลสาธารณะ
+      ไม่มีข้อมูลส่วนตัวของคุณส่งติดไปด้วย
+    </p>
+  </section>
+
+  <section>
+    <span class="clause-label">ข้อ 6</span>
+    <h2>เด็กและเยาวชน</h2>
+    <p>
+      แอปนี้ไม่ได้ออกแบบหรือมุ่งเป้าไปที่เด็กอายุต่ำกว่า 13 ปี และไม่มีการเก็บข้อมูลจากเด็กโดยเจตนา
+    </p>
+  </section>
+
+  <section>
+    <span class="clause-label">ข้อ 7</span>
+    <h2>การเปลี่ยนแปลงนโยบายนี้</h2>
+    <p>
+      หากมีการปรับปรุงนโยบาย เราจะอัปเดตวันที่มีผลบังคับใช้ไว้ที่ด้านบนของหน้านี้
+      การใช้งานแอปต่อหลังจากมีการเปลี่ยนแปลง ถือว่าคุณยอมรับนโยบายฉบับปรับปรุงแล้ว
+    </p>
+  </section>
+
+  <section>
+    <span class="clause-label">ข้อ 8</span>
+    <h2>ติดต่อเรา</h2>
+    <p>
+      หากมีข้อสงสัยเกี่ยวกับนโยบายความเป็นส่วนตัวนี้ ติดต่อได้ที่
+      <a href="mailto:babyconisiss@gmail.com">babyconisiss@gmail.com</a>
+    </p>
+  </section>
+
+  <hr class="divider" />
+
+  <footer>
+    <p>เอกสารนี้จัดทำขึ้นเพื่อประกอบการเผยแพร่แอปตรวจหวยบน App Store และ Google Play</p>
+  </footer>
+</div>
